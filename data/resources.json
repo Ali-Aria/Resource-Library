@@ -1,54 +1,18 @@
 {
   "resources": [
     {
-      "id": "amazon-image-rules-cases",
-      "title": "亚马逊图片规范及实战案例",
-      "description": "用 AI 做亚马逊产品图",
-      "category": "教程",
-      "categories": ["教程"],
-      "tags": ["亚马逊", "产品图", "AI作图"],
-      "updatedAt": "2026-05-16",
-      "cover": "assets/covers/amazon-image-rules.png",
-      "articleUrl": "https://mp.weixin.qq.com/s/uiUTL0GZG-qf0JH738xfQg",
-      "baiduUrl": "https://pan.baidu.com/s/1C71m0WUmLADkCCFe1OSxbQ?pwd=aiu6",
-      "baiduCode": "aiu6",
-      "quarkUrl": "https://pan.quark.cn/s/ef8d0825b726"
-    },
-    {
-      "id": "generate-seven-images",
-      "title": "一次生成7张图",
-      "description": "适合亚马逊精铺卖家的 AI 作图方案，一次生成7张图",
-      "category": "教程",
-      "categories": ["教程"],
-      "tags": ["亚马逊", "AI作图", "精铺"],
-      "updatedAt": "2026-05-21",
-      "cover": "assets/covers/generate-seven-images.png",
-      "articleUrl": "https://mp.weixin.qq.com/s/DdT--9WPagQ4wlYhpQngVg",
-      "baiduUrl": "https://pan.baidu.com/s/1Rf8mzMPyw9XrRtVS8q4zKQ?pwd=sfr9",
-      "baiduCode": "sfr9",
-      "quarkUrl": "https://pan.quark.cn/s/7fcb45420970"
-    },
-    {
-      "id": "upscayl",
-      "title": "高清放大软件 Upscayl",
-      "description": "高清放大软件",
-      "category": "工具",
-      "categories": ["工具"],
-      "tags": ["高清放大", "图片工具", "Upscayl"],
-      "updatedAt": "2026-05-21",
-      "cover": "assets/covers/upscayl.svg",
-      "articleUrl": "",
-      "baiduUrl": "https://pan.baidu.com/s/1MolbMk5Qw5aJ75nLtU6Kpg?pwd=6kgd",
-      "baiduCode": "6kgd",
-      "quarkUrl": "https://pan.quark.cn/s/d6dcdc97c098"
-    },
-    {
       "id": "codex-cockpit-tools",
       "title": "Codex和cockpit工具",
       "description": "Codex和cockpit工具分享",
       "category": "工具",
-      "categories": ["工具"],
-      "tags": ["Codex", "cockpit", "AI工具"],
+      "categories": [
+        "工具"
+      ],
+      "tags": [
+        "Codex",
+        "cockpit",
+        "AI工具"
+      ],
       "updatedAt": "2026-05-27",
       "cover": "assets/covers/codex-cockpit.png",
       "articleUrl": "https://mp.weixin.qq.com/s/gpB-3K0VTM-8iLRp0D4-0g",
@@ -61,14 +25,81 @@
       "title": "亚马逊图片工作台",
       "description": "亚马逊图片工作台项目",
       "category": "工具、教程",
-      "categories": ["工具", "教程"],
-      "tags": ["亚马逊", "图片工作台", "项目"],
+      "categories": [
+        "工具",
+        "教程"
+      ],
+      "tags": [
+        "亚马逊",
+        "图片工作台",
+        "项目"
+      ],
       "updatedAt": "2026-05-27",
       "cover": "assets/covers/amazon-image-workbench.jpg",
       "articleUrl": "https://mp.weixin.qq.com/s/YkFC81mHyscpDqCmNeez4w",
       "baiduUrl": "https://pan.baidu.com/s/1-kZkL1_U1nsJ3jzFjnh3iA?pwd=wpk5",
       "baiduCode": "wpk5",
       "quarkUrl": "https://pan.quark.cn/s/e996850ca5db"
+    },
+    {
+      "id": "generate-seven-images",
+      "title": "一次生成7张图",
+      "description": "适合亚马逊精铺卖家的 AI 作图方案，一次生成7张图",
+      "category": "教程",
+      "categories": [
+        "教程"
+      ],
+      "tags": [
+        "亚马逊",
+        "AI作图",
+        "精铺"
+      ],
+      "updatedAt": "2026-05-21",
+      "cover": "assets/covers/generate-seven-images.png",
+      "articleUrl": "https://mp.weixin.qq.com/s/DdT--9WPagQ4wlYhpQngVg",
+      "baiduUrl": "https://pan.baidu.com/s/1Rf8mzMPyw9XrRtVS8q4zKQ?pwd=sfr9",
+      "baiduCode": "sfr9",
+      "quarkUrl": "https://pan.quark.cn/s/7fcb45420970"
+    },
+    {
+      "id": "upscayl",
+      "title": "高清放大软件 Upscayl",
+      "description": "高清放大软件",
+      "category": "工具",
+      "categories": [
+        "工具"
+      ],
+      "tags": [
+        "高清放大",
+        "图片工具",
+        "Upscayl"
+      ],
+      "updatedAt": "2026-05-21",
+      "cover": "assets/covers/upscayl.svg",
+      "articleUrl": "",
+      "baiduUrl": "https://pan.baidu.com/s/1MolbMk5Qw5aJ75nLtU6Kpg?pwd=6kgd",
+      "baiduCode": "6kgd",
+      "quarkUrl": "https://pan.quark.cn/s/d6dcdc97c098"
+    },
+    {
+      "id": "amazon-image-rules-cases",
+      "title": "亚马逊图片规范及实战案例",
+      "description": "用 AI 做亚马逊产品图",
+      "category": "教程",
+      "categories": [
+        "教程"
+      ],
+      "tags": [
+        "亚马逊",
+        "产品图",
+        "AI作图"
+      ],
+      "updatedAt": "2026-05-16",
+      "cover": "assets/covers/amazon-image-rules.png",
+      "articleUrl": "https://mp.weixin.qq.com/s/uiUTL0GZG-qf0JH738xfQg",
+      "baiduUrl": "https://pan.baidu.com/s/1C71m0WUmLADkCCFe1OSxbQ?pwd=aiu6",
+      "baiduCode": "aiu6",
+      "quarkUrl": "https://pan.quark.cn/s/ef8d0825b726"
     }
   ]
 }

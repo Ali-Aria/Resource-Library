@@ -36,7 +36,7 @@ async function init() {
     }
 
     const data = await response.json();
-    state.resources = Array.isArray(data.resources) ? data.resources : [];
+    state.resources = sortResourcesByDate(Array.isArray(data.resources) ? data.resources : []);
 
     renderCategories();
     renderResources();
@@ -171,6 +171,33 @@ function getResourceCategories(resource) {
     .split(/[、,，/]/)
     .map((item) => item.trim())
     .filter(Boolean);
+}
+
+function sortResourcesByDate(resources) {
+  return resources
+    .map((resource, index) => ({ resource, index }))
+    .sort((left, right) => {
+      const dateDiff = getDateTime(right.resource.updatedAt) - getDateTime(left.resource.updatedAt);
+
+      if (dateDiff !== 0) {
+        return dateDiff;
+      }
+
+      return left.index - right.index;
+    })
+    .map((item) => item.resource);
+}
+
+function getDateTime(value) {
+  const raw = getString(value);
+  const dateOnly = raw.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+
+  if (dateOnly) {
+    return new Date(Number(dateOnly[1]), Number(dateOnly[2]) - 1, Number(dateOnly[3])).getTime();
+  }
+
+  const date = new Date(raw);
+  return Number.isNaN(date.getTime()) ? 0 : date.getTime();
 }
 
 function createTag(tagText) {

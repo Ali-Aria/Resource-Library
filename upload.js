@@ -42,7 +42,7 @@ async function loadResources() {
     }
 
     const data = await response.json();
-    dataStore.resources = Array.isArray(data.resources) ? data.resources : [];
+    dataStore.resources = sortResourcesByDate(Array.isArray(data.resources) ? data.resources : []);
     jsonStatus.textContent = "已读取当前资料库。";
   } catch (error) {
     dataStore.resources = [];
@@ -64,6 +64,7 @@ function handleSubmit(event) {
 
   resource.id = makeUniqueId(resource.id);
   dataStore.resources.unshift(resource);
+  dataStore.resources = sortResourcesByDate(dataStore.resources);
   renderAll();
   setStatus(`已添加：${resource.title}`);
   form.reset();
@@ -231,6 +232,33 @@ function makeUniqueId(baseId) {
   }
 
   return nextId;
+}
+
+function sortResourcesByDate(resources) {
+  return resources
+    .map((resource, index) => ({ resource, index }))
+    .sort((left, right) => {
+      const dateDiff = getDateTime(right.resource.updatedAt) - getDateTime(left.resource.updatedAt);
+
+      if (dateDiff !== 0) {
+        return dateDiff;
+      }
+
+      return left.index - right.index;
+    })
+    .map((item) => item.resource);
+}
+
+function getDateTime(value) {
+  const raw = cleanText(value);
+  const dateOnly = raw.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+
+  if (dateOnly) {
+    return new Date(Number(dateOnly[1]), Number(dateOnly[2]) - 1, Number(dateOnly[3])).getTime();
+  }
+
+  const date = new Date(raw);
+  return Number.isNaN(date.getTime()) ? 0 : date.getTime();
 }
 
 function splitTags(value) {
