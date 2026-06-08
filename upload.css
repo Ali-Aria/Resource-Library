@@ -1,0 +1,244 @@
+.upload-shell {
+  max-width: 1180px;
+}
+
+.upload-layout {
+  display: grid;
+  gap: 16px;
+  align-items: start;
+}
+
+.editor-panel,
+.preview-panel {
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(228, 238, 233, 0.9);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-soft);
+}
+
+.panel-heading {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.panel-heading h2 {
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 820;
+  line-height: 1.35;
+}
+
+.panel-heading p {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.count-pill {
+  display: inline-flex;
+  min-height: 30px;
+  flex: 0 0 auto;
+  align-items: center;
+  padding: 0 10px;
+  color: var(--accent-strong);
+  font-size: 12px;
+  font-weight: 760;
+  line-height: 30px;
+  background: var(--accent-soft);
+  border-radius: var(--radius-control);
+}
+
+.resource-form {
+  display: grid;
+  gap: 13px;
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+}
+
+.field span,
+.field-group legend {
+  color: #43534b;
+  font-size: 13px;
+  font-weight: 760;
+  line-height: 1.3;
+}
+
+.field input,
+.field textarea,
+.output-field textarea {
+  width: 100%;
+  min-width: 0;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.5;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  outline: 0;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.field input {
+  min-height: 46px;
+  padding: 0 13px;
+}
+
+.field textarea,
+.output-field textarea {
+  padding: 12px 13px;
+  resize: vertical;
+}
+
+.field input:focus,
+.field textarea:focus,
+.output-field textarea:focus {
+  border-color: rgba(40, 201, 120, 0.72);
+  box-shadow: 0 0 0 4px rgba(40, 201, 120, 0.12);
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #a3afaa;
+}
+
+.field-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.field-group legend {
+  width: 100%;
+  margin-bottom: 1px;
+}
+
+.check-pill {
+  position: relative;
+  display: inline-flex;
+  min-height: 40px;
+  cursor: pointer;
+}
+
+.check-pill input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.check-pill span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 15px;
+  color: #52635b;
+  font-size: 14px;
+  font-weight: 720;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  transition:
+    color 160ms ease,
+    background-color 160ms ease,
+    border-color 160ms ease;
+}
+
+.check-pill input:checked + span {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
+  border-color: transparent;
+}
+
+.field-grid {
+  display: grid;
+  gap: 13px;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  padding-top: 3px;
+}
+
+.primary-button,
+.secondary-button,
+.plain-button {
+  min-height: 42px;
+  padding: 0 15px;
+  font-size: 14px;
+  font-weight: 760;
+  border-radius: var(--radius-control);
+  cursor: pointer;
+}
+
+.primary-button {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  border: 0;
+  box-shadow: 0 10px 20px rgba(17, 169, 107, 0.18);
+}
+
+.secondary-button {
+  color: var(--accent-strong);
+  background: #ffffff;
+  border: 1px solid rgba(40, 201, 120, 0.3);
+}
+
+.plain-button {
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+.status-line {
+  min-height: 22px;
+  margin-top: 12px;
+  color: var(--accent-strong);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.preview-card {
+  margin-bottom: 14px;
+}
+
+.preview-card .card-body {
+  padding: 14px;
+}
+
+.output-field textarea {
+  min-height: 260px;
+  font-family: Consolas, "SFMono-Regular", Menlo, monospace;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+@media (min-width: 760px) {
+  .upload-layout {
+    grid-template-columns: minmax(0, 1.06fr) minmax(360px, 0.94fr);
+    gap: 20px;
+  }
+
+  .editor-panel,
+  .preview-panel {
+    padding: 18px;
+  }
+
+  .field-grid {
+    grid-template-columns: minmax(0, 1fr) 150px;
+  }
+}

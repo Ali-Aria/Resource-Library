@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#ecfff5" />
+    <title>阿梨资料库</title>
+    <meta
+      name="description"
+      content="阿梨资料库，持续更新教程、工具和可下载资料。"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="brand-row" aria-label="阿梨资料库">
+          <img class="brand-avatar" src="./assets/avatar.jpg" alt="阿梨头像" />
+          <div>
+            <h1>阿梨资料库</h1>
+            <p class="subtitle">精选教程、工具与可下载资料，适合收藏随时查。</p>
+            <div class="brand-actions">
+              <a class="ghost-link" href="./upload.html">发布资料</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="search-panel">
+          <label class="search-box" for="searchInput">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="m21 21-4.35-4.35m2.1-5.4a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+            <input id="searchInput" type="search" placeholder="搜索资料名称、简介或标签" autocomplete="off" />
+          </label>
+          <nav class="category-tabs" id="categoryTabs" aria-label="资料分类"></nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="results-head" aria-live="polite">
+          <p id="resultSummary">正在加载资料...</p>
+        </section>
+        <section class="resource-grid" id="resourceGrid" aria-label="资料列表"></section>
+        <section class="empty-state" id="emptyState" hidden>
+          <div class="empty-icon" aria-hidden="true"></div>
+          <h2>没有找到匹配资料</h2>
+          <p>换个关键词，或切换到全部分类再试试。</p>
+        </section>
+      </main>
+
+      <footer class="site-footer">持续更新中，建议收藏本页面</footer>
+    </div>
+
+    <template id="resourceCardTemplate">
+      <article class="resource-card">
+        <a class="cover-link" target="_blank" rel="noopener noreferrer">
+          <img class="cover-image" alt="" loading="lazy" />
+        </a>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="category-label"></span>
+            <time></time>
+          </div>
+          <h2></h2>
+          <p class="description"></p>
+          <div class="tag-list" aria-label="标签"></div>
+          <div class="action-list"></div>
+        </div>
+      </article>
+    </template>
+
+    <noscript>
+      <p class="noscript">请开启 JavaScript 后查看资料列表。</p>
+    </noscript>
+  </body>
+</html>
