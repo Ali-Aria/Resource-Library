@@ -3,56 +3,100 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#ecfff5" />
+    <meta name="theme-color" content="#f6f9f7" />
     <title>阿梨资料库</title>
     <meta
       name="description"
       content="阿梨资料库，持续更新教程、工具和可下载资料。"
     />
+    <link rel="icon" href="./assets/avatar-160.jpg" type="image/jpeg" />
     <link rel="stylesheet" href="./style.css" />
     <script src="./script.js" defer></script>
   </head>
   <body>
+    <a class="skip-link" href="#mainContent">跳到资料列表</a>
     <div class="page-shell">
       <header class="site-header">
         <div class="brand-row" aria-label="阿梨资料库">
-          <img class="brand-avatar" src="./assets/avatar.jpg" alt="阿梨头像" />
-          <div>
-            <h1>阿梨资料库</h1>
-            <p class="subtitle">精选教程、工具与可下载资料，适合收藏随时查。</p>
-            <div class="brand-actions">
-              <a class="ghost-link" href="./upload.html">发布资料</a>
+          <div class="brand-main">
+            <img
+              class="brand-avatar"
+              src="./assets/avatar-160.jpg"
+              width="160"
+              height="160"
+              alt="阿梨头像"
+            />
+            <div class="brand-copy">
+              <h1>阿梨资料库</h1>
+              <p class="subtitle">精选教程、工具与可下载资料，适合收藏随时查。</p>
             </div>
           </div>
         </div>
 
         <div class="search-panel">
           <label class="search-box" for="searchInput">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="m21 21-4.35-4.35m2.1-5.4a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
+            <span class="visually-hidden">搜索资料</span>
             <input id="searchInput" type="search" placeholder="搜索资料名称、简介或标签" autocomplete="off" />
           </label>
           <nav class="category-tabs" id="categoryTabs" aria-label="资料分类"></nav>
         </div>
       </header>
 
-      <main>
+      <main id="mainContent">
         <section class="results-head" aria-live="polite">
           <p id="resultSummary">正在加载资料...</p>
         </section>
-        <section class="resource-grid" id="resourceGrid" aria-label="资料列表"></section>
-        <section class="empty-state" id="emptyState" hidden>
-          <div class="empty-icon" aria-hidden="true"></div>
-          <h2>没有找到匹配资料</h2>
-          <p>换个关键词，或切换到全部分类再试试。</p>
+        <section class="resource-grid" id="resourceGrid" aria-label="资料列表" aria-busy="true">
+          <article class="resource-card skeleton-card is-featured" aria-hidden="true">
+            <div class="skeleton-media"></div>
+            <div class="skeleton-body">
+              <span class="skeleton-line skeleton-line-short"></span>
+              <span class="skeleton-line skeleton-line-title"></span>
+              <span class="skeleton-line"></span>
+              <span class="skeleton-line skeleton-line-actions"></span>
+            </div>
+          </article>
+          <article class="resource-card skeleton-card" aria-hidden="true">
+            <div class="skeleton-media"></div>
+            <div class="skeleton-body">
+              <span class="skeleton-line skeleton-line-short"></span>
+              <span class="skeleton-line skeleton-line-title"></span>
+              <span class="skeleton-line"></span>
+              <span class="skeleton-line skeleton-line-actions"></span>
+            </div>
+          </article>
+          <article class="resource-card skeleton-card" aria-hidden="true">
+            <div class="skeleton-media"></div>
+            <div class="skeleton-body">
+              <span class="skeleton-line skeleton-line-short"></span>
+              <span class="skeleton-line skeleton-line-title"></span>
+              <span class="skeleton-line"></span>
+              <span class="skeleton-line skeleton-line-actions"></span>
+            </div>
+          </article>
+          <article class="resource-card skeleton-card" aria-hidden="true">
+            <div class="skeleton-media"></div>
+            <div class="skeleton-body">
+              <span class="skeleton-line skeleton-line-short"></span>
+              <span class="skeleton-line skeleton-line-title"></span>
+              <span class="skeleton-line"></span>
+              <span class="skeleton-line skeleton-line-actions"></span>
+            </div>
+          </article>
+          <article class="resource-card skeleton-card" aria-hidden="true">
+            <div class="skeleton-media"></div>
+            <div class="skeleton-body">
+              <span class="skeleton-line skeleton-line-short"></span>
+              <span class="skeleton-line skeleton-line-title"></span>
+              <span class="skeleton-line"></span>
+              <span class="skeleton-line skeleton-line-actions"></span>
+            </div>
+          </article>
+        </section>
+        <section class="state-panel" id="statePanel" role="status" hidden>
+          <h2 id="stateTitle"></h2>
+          <p id="stateDescription"></p>
+          <button class="retry-button" id="retryButton" type="button" hidden>重新加载</button>
         </section>
       </main>
 
@@ -62,7 +106,7 @@
     <template id="resourceCardTemplate">
       <article class="resource-card">
         <a class="cover-link" target="_blank" rel="noopener noreferrer">
-          <img class="cover-image" alt="" loading="lazy" />
+          <img class="cover-image" width="1080" height="460" alt="" />
         </a>
         <div class="card-body">
           <div class="card-meta">
