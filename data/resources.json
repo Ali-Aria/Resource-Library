@@ -1,6 +1,26 @@
 {
   "resources": [
     {
+      "id": "电商口播视频指令",
+      "title": "电商口播视频指令",
+      "description": "口播视频指令及去星星水印工具（推荐先保存再下载）",
+      "category": "教程",
+      "categories": [
+        "教程"
+      ],
+      "tags": [
+        "亚马逊",
+        "去水印",
+        "口播"
+      ],
+      "updatedAt": "2026-07-03",
+      "cover": "https://niaoyu.oss-cn-shenzhen.aliyuncs.com/img/normal_cover_1504x640_normal_20260703174736_manual.png",
+      "articleUrl": "",
+      "baiduUrl": "https://pan.baidu.com/s/1RhrGytw6YC9t1Qh3v9asXQ?pwd=m8q9",
+      "baiduCode": "m8q9",
+      "quarkUrl": "https://pan.quark.cn/s/8fafdf3f4e9c"
+    },
+    {
       "id": "codex-cockpit-tools",
       "title": "Codex和cockpit工具",
       "description": "Codex和cockpit工具分享",
