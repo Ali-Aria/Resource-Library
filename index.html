@@ -12,6 +12,15 @@
     <link rel="icon" href="./assets/avatar-160.jpg" type="image/jpeg" />
     <link rel="stylesheet" href="./style.css" />
     <script src="./script.js" defer></script>
+    <script>
+      window._hmt = window._hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?d03b0ce5f381d54632d1d36cb27ce597";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#mainContent">跳到资料列表</a>
@@ -38,7 +47,7 @@
               <h2 id="sponsorTitle">首页首屏黄金位，正在开放合作</h2>
               <p>适合 AI 工具、电商资源、课程服务长期曝光。想让更多精准用户看见你，公众号后台回复「合作」。</p>
             </div>
-            <span class="sponsor-cta" aria-hidden="true">联系合作</span>
+            <button class="sponsor-cta" id="sponsorContact" type="button">联系：ali_aria@163.com</button>
           </aside>
         </div>
 
@@ -110,6 +119,7 @@
       </main>
 
       <footer class="site-footer">持续更新中，建议收藏本页面</footer>
+      <div class="toast-message" id="copyToast" role="status" aria-live="polite" hidden></div>
     </div>
 
     <template id="resourceCardTemplate">

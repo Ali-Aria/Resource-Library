@@ -7,6 +7,10 @@ const state = {
 
 const PREFERRED_CATEGORIES = ["教程", "工具"];
 const DEFAULT_COVER = "assets/covers/default-resource.svg";
+const CONTACT_EMAIL = "ali_aria@163.com";
+const TOAST_HIDE_DELAY = 2200;
+
+let toastTimer = 0;
 
 const elements = {
   searchInput: document.querySelector("#searchInput"),
@@ -18,6 +22,8 @@ const elements = {
   stateDescription: document.querySelector("#stateDescription"),
   retryButton: document.querySelector("#retryButton"),
   cardTemplate: document.querySelector("#resourceCardTemplate"),
+  sponsorContact: document.querySelector("#sponsorContact"),
+  copyToast: document.querySelector("#copyToast"),
 };
 
 init();
@@ -35,6 +41,67 @@ function bindEvents() {
   });
 
   elements.retryButton.addEventListener("click", loadResources);
+
+  elements.sponsorContact?.addEventListener("click", handleSponsorContactClick);
+}
+
+async function handleSponsorContactClick() {
+  trackEvent("ad_slot", "copy_email", "homepage_sponsor_banner", 1);
+
+  try {
+    await copyText(CONTACT_EMAIL);
+    showToast("已复制邮箱");
+  } catch (error) {
+    showToast(`复制失败，请手动复制：${CONTACT_EMAIL}`, true);
+    console.error(error);
+  }
+}
+
+async function copyText(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    await navigator.clipboard.writeText(text);
+    return;
+  }
+
+  const input = document.createElement("textarea");
+  input.value = text;
+  input.setAttribute("readonly", "");
+  input.style.position = "fixed";
+  input.style.top = "-9999px";
+  input.style.left = "-9999px";
+  document.body.append(input);
+  input.focus();
+  input.select();
+
+  try {
+    const copied = document.execCommand("copy");
+
+    if (!copied) {
+      throw new Error("浏览器拒绝复制到剪贴板。");
+    }
+  } finally {
+    input.remove();
+  }
+}
+
+function showToast(message, isError = false) {
+  if (!elements.copyToast) {
+    return;
+  }
+
+  window.clearTimeout(toastTimer);
+  elements.copyToast.textContent = message;
+  elements.copyToast.classList.toggle("is-error", isError);
+  elements.copyToast.hidden = false;
+
+  toastTimer = window.setTimeout(() => {
+    elements.copyToast.hidden = true;
+  }, TOAST_HIDE_DELAY);
+}
+
+function trackEvent(category, action, label, value) {
+  window._hmt = window._hmt || [];
+  window._hmt.push(["_trackEvent", category, action, label, value]);
 }
 
 async function loadResources() {
