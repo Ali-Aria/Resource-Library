@@ -1,6 +1,25 @@
 {
   "resources": [
     {
+      "id": "仅支持omniflashveogemini的去水印工具",
+      "title": "仅支持omniFlash、Veo、gemini的去水印工具",
+      "description": "omniFlash、Veo、gemini去水印（win和mac版）",
+      "category": "工具",
+      "categories": [
+        "工具"
+      ],
+      "tags": [
+        "亚马逊",
+        "去水印"
+      ],
+      "updatedAt": "2026-07-14",
+      "cover": "assets/covers/default-resource.svg",
+      "articleUrl": "https://mp.weixin.qq.com/s/wQlvSdhQ1xRV7mQIFK6dyg",
+      "baiduUrl": "https://pan.baidu.com/s/1GNo7MWB-HC1OF5wpnEn-hA?pwd=jimg",
+      "baiduCode": "jimg",
+      "quarkUrl": "https://pan.quark.cn/s/b8deece5166c"
+    },
+    {
       "id": "电商口播视频指令",
       "title": "电商口播视频指令",
       "description": "口播视频指令及去星星水印工具（推荐先保存再下载）",
