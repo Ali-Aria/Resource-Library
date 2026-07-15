@@ -1,6 +1,26 @@
 {
   "resources": [
     {
+      "id": "文章配图skill-小红书卡片skill",
+      "title": "文章配图skill & 小红书卡片skill",
+      "description": "内含两个配图skill\n1、一键对文章进行配图\n2、生成小红书skill",
+      "category": "工具",
+      "categories": [
+        "工具"
+      ],
+      "tags": [
+        "小红书",
+        "配图",
+        "skill"
+      ],
+      "updatedAt": "2026-07-15",
+      "cover": "https://niaoyu.oss-cn-shenzhen.aliyuncs.com/img/normal_cover_1600x900_normal_20260715142255_manual.png",
+      "articleUrl": "https://mp.weixin.qq.com/s/SWZhQ8Vqil3ZfGPj6RoUHw",
+      "baiduUrl": "https://pan.baidu.com/s/1DuXKlQRvjX3mx3Np4ZdAqw?pwd=9ss2",
+      "baiduCode": "9ss2",
+      "quarkUrl": "https://pan.quark.cn/s/275cbf9cb7c4"
+    },
+    {
       "id": "仅支持omniflashveogemini的去水印工具",
       "title": "仅支持omniFlash、Veo、gemini的去水印工具",
       "description": "omniFlash、Veo、gemini去水印（win和mac版）",
