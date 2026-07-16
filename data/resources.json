@@ -1,6 +1,25 @@
 {
   "resources": [
     {
+      "id": "gpt-56-sol-通用提示词骨架",
+      "title": "GPT-5.6 Sol 通用提示词骨架",
+      "description": "openAI官方GPT-5.6 Sol 通用提示词骨架",
+      "category": "教程",
+      "categories": [
+        "教程"
+      ],
+      "tags": [
+        "提示词",
+        "ChatGPT"
+      ],
+      "updatedAt": "2026-07-16",
+      "cover": "https://niaoyu.oss-cn-shenzhen.aliyuncs.com/img/normal_cover_1216x912_normal_20260716190429_manual.png",
+      "articleUrl": "",
+      "baiduUrl": "https://pan.baidu.com/s/1GAYYg2tkia_aB4gex4I_4w?pwd=ay36",
+      "baiduCode": "ay36",
+      "quarkUrl": "https://pan.quark.cn/s/f33f5c462a68"
+    },
+    {
       "id": "文章配图skill-小红书卡片skill",
       "title": "文章配图skill & 小红书卡片skill",
       "description": "内含两个配图skill\n1、一键对文章进行配图\n2、生成小红书skill",
