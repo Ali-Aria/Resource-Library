@@ -2,6 +2,10 @@
 
 阿梨资料库静态站点，适合部署到 GitHub Pages。
 
+## 在线预览
+
+[https://ali-aria.github.io/Resource-Library/](https://ali-aria.github.io/Resource-Library/)
+
 ## 文件
 
 - `index.html`：资料库首页

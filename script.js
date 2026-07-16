@@ -234,6 +234,7 @@ function getVisibleResources() {
 function createResourceCard(resource, index, total) {
   const card = elements.cardTemplate.content.firstElementChild.cloneNode(true);
   const articleUrl = getString(resource.articleUrl);
+  const newBadge = card.querySelector(".new-badge");
   const coverLink = card.querySelector(".cover-link");
   const coverImage = card.querySelector(".cover-image");
   const categoryLabel = card.querySelector(".category-label");
@@ -245,6 +246,11 @@ function createResourceCard(resource, index, total) {
 
   if (index === 0 && total >= 3) {
     card.classList.add("is-featured");
+  }
+
+  if (state.resources[0] === resource) {
+    card.classList.add("is-newest");
+    newBadge.hidden = false;
   }
 
   if (articleUrl) {
